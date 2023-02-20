@@ -49,8 +49,6 @@ class Motor:
             return cambiarRegistro
 
         def asignarTipo (self, tipo):
-            tipos = ["electrico", "gasolina"]
-            tipoAsignado = str(input())
-            tipoNuevo=tipoAsignado
-            if tipo tipoNuevo in tipos:
-                self.tipo = tipoAsignado
+            self.tipo = tipo
+            if tipo == "electrico" or "combustible":
+                asignarTipo
