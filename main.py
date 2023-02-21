@@ -30,11 +30,11 @@ class Asiento:
         self.precio = precio
         self.registro = registro
 
-        def cambiarColor(self, colores):
-            colores = ["rojo", "verde", "amarillo", "negro", "blanco"]
-            if color in colores:
-                self.color = color
-            return cambiarColor
+    def cambiarColor(self, colores):
+        colores = ["rojo", "verde", "amarillo", "negro", "blanco"]
+        if color in colores:
+            self.color = color
+        return cambiarColor
 
 class Motor:
     def __innit__(self, numeroCilindros, tipo, registro):
