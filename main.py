@@ -24,7 +24,7 @@ class Auto:
                 return "Auto original"
             return verificarIdentidad
 
-class Asientos:
+class Asiento:
     def __innit__(self, color, precio, registro):
         self.color = color
         self.precio = precio
@@ -43,10 +43,7 @@ class Motor:
         self.registro = registro
 
         def cambiarRegistro (self, registro):
-            registroNuevo = int(input())
-            if registroNuevo != registro:
-                self.registro = registroNuevo
-            return cambiarRegistro
+            self.registro = registro
 
         def asignarTipo (self, tipo):
             self.tipo = tipo
