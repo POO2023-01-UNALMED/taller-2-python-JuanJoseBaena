@@ -1,4 +1,5 @@
 class Auto:
+    cantidadCreados = 0
     def __innit__(self, modelo, precio, asientos, marca, motor, registro, cantidadCreados):
         self.modelo = modelo
         self.precio = precio
@@ -10,19 +11,21 @@ class Auto:
 
         def cantidadAsientos(self, cantidadAsientos):
             numeroAsientos = 0
-            for Asiento in self.asientos:
-                if isinstance(Asiento, asientos):
+            for asiento in self.asientos:
+                if isinstance(asiento, asientos):
                     numeroAsientos += 1
-            return(cantidadAsientos)
+            return cantidadAsientos
 
-        def verificarIdentidad(self,):
-            if self.motor != self.registro:
+        def verificarIdentidad(self):
+            for asiento in self.asientos:
+                if asiento != None:
+                    if asiento.registro != self.registro:
+                        return "Las piezas no son originales"
+
+            if self.motor.registro != self.registro:
                 return "Las piezas no son originales"
-            elif self.asientos != self.registro:
-                return "Las piezas no son originales"
-            else:
-                return "Auto original"
-            return verificarIdentidad
+            
+            return "Auto original"
 
 class Asiento:
     def __innit__(self, color, precio, registro):
@@ -30,7 +33,7 @@ class Asiento:
         self.precio = precio
         self.registro = registro
 
-    def cambiarColor(self, colores):
+    def cambiarColor(self, color):
         colores = ["rojo", "verde", "amarillo", "negro", "blanco"]
         if color in colores:
             self.color = color
@@ -46,6 +49,7 @@ class Motor:
             self.registro = registro
 
         def asignarTipo (self, tipo):
-            self.tipo = tipo
-            if tipo == "electrico" or "combustible":
-                asignarTipo
+            tipos = ["electrico", "gasolina"]
+            if tipo in tipos:
+                self.tipos = tipo
+
