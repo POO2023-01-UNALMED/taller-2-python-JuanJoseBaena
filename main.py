@@ -53,3 +53,4 @@ class Motor:
             if tipo in tipos:
                 self.tipos = tipo
 
+#Version 3
